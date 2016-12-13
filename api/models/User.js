@@ -5,7 +5,7 @@
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
-var bcrypt = require('bcrypt-nodejs');
+var bcrpyt = require('bcrpyt');
 
 module.exports = {
 
@@ -43,8 +43,8 @@ module.exports = {
 
   // 创建（注册）用户前，对用户密码加密
  beforeCreate: function (values, cb) {
-   bcrypt.genSalt(10, function(err, salt) {
-     bcrypt.hash(values.password, salt, function(err, hash) {
+   bcrpyt.genSalt(10, function(err, salt) {
+     bcrpyt.hash(values.password, salt, function(err, hash) {
        if(err) return cb(err);
        values.password = hash;
        // 执行用户定义回调
@@ -52,5 +52,5 @@ module.exports = {
      });
    });
  }
- 
+
 };

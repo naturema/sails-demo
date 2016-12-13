@@ -29,4 +29,8 @@ module.exports.models = {
   ***************************************************************************/
   // migrate: 'alter'
 
+  'connection' : 'mongo',
+   autoCreatedAt: true,
+   autoUpdatedAt: true
+   
 };

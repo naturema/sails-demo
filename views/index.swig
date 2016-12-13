@@ -1,4 +1,7 @@
 {% extends 'layout.swig' %}
+{# 声明本页面调用的模块 #}
+{% set module = 'index' -%}
+
 {% block title -%}Woo的博客{%- endblock %}
 {% block content -%}
     <div>
